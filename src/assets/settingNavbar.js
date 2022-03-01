@@ -1,0 +1,6 @@
+export {ReactComponent as heart} from "./images/icons/Appereance.svg"
+export {ReactComponent as restaurant} from "./images/icons/Restaurant.svg"
+export {ReactComponent as discount} from "./images/icons/Discount.svg"
+export {ReactComponent as notification} from "./images/icons/Notification.svg"
+export {ReactComponent as security} from "./images/icons/Security.svg"
+export {ReactComponent as about} from "./images/icons/About Us.svg"

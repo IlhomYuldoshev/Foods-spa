@@ -1,0 +1,163 @@
+@import "../variables";
+
+.homepage {
+  margin-left: 104px;
+  margin-right: 410px;
+  padding: 24px 38px 24px 10px;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    &__logo {
+      color: $inputColor;
+      margin-right: auto;
+
+      .title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 1.4;
+        margin-top: 0;
+        margin-bottom: 4px;
+        color: $white;
+      }
+
+      .time {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+      }
+    }
+
+    &__search {
+      display: flex;
+      position: relative;
+
+      .inputSearch {
+        color: $white;
+        min-width: 220px;
+        padding: 14px 14px 14px 42px;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 400;
+        background-color: $formBg;
+        border: 1px solid $darkLine;
+        border-radius: 8px;
+        outline: none;
+        &::placeholder {
+          color: $textColor;
+        }
+      }
+      .searchSvg {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+        @include flexCenter();
+        width: 15px;
+        height: 15px;
+        content: "";
+      }
+    }
+  }
+
+  // navbar klasslari alohida faylda
+
+  .Sort-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+
+    &__title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .Sort-Popup {
+      .select {
+        background-color: $darkBg;
+        padding: 14px;
+        border-radius: 8px;
+        border: 1px solid $darkLine;
+        color: $inputColor;
+        outline: none;
+        font-size: 14px;
+        line-height: 1.3;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .foods-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    margin-bottom: -24px;
+    margin-left: -28px;
+    @include overflowFixed();
+
+    .food-item-loader {
+      margin-left: 28px;
+      margin-bottom: 58px;
+      max-width: 192px;
+      width: 100%;
+    }
+
+    .food-item {
+      cursor: pointer;
+      margin-left: 28px;
+      margin-bottom: 58px;
+      padding: 0 21px 24px;
+      max-width: 192px;
+      width: 100%;
+      background-color: $darkBg;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include noSelect();
+
+      .food-img {
+        width: 132px;
+        height: 132px;
+        transform: translateY(-34px);
+        margin-bottom: 14px;
+        object-fit: contain;
+        border-radius: 50%;
+      }
+
+      .food-name{
+        flex-grow: 1;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.3;
+        font-weight: 400;
+        width: 144px;
+      }
+
+      .price {
+        margin-bottom: 4px;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .availableCount {
+        color: $textColor;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 400;
+      }
+    }
+  }
+}

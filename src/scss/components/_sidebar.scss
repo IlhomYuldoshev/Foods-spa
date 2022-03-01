@@ -1,0 +1,123 @@
+@import "../variables";
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 16px 16px 0;
+  overflow: hidden;
+
+  max-width: 104px;
+  height: 100vh;
+  background-color: $darkBg;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  &__item {
+    height: 102px;
+    width: 92px;
+    background-color: $darkBg;
+
+    .top {
+      height: 11px;
+      border-radius: 0 0 15px 0;
+      background-color: $darkBg;
+    }
+
+    .center {
+      background-color: $darkBg;
+      cursor: pointer;
+      &__wrapper {
+        height: 80px;
+        border-radius: 15px 0 0 15px;
+        background-color: $darkBg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__inner {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: $darkBg;
+        transform: translateX(-6px);
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: $primaryColor;
+        }
+      }
+    }
+
+    .bottom {
+      height: 11px;
+      border-radius: 0 15px 0 0;
+      background-color: $darkBg;
+    }
+
+    &.logo {
+
+      .center {
+        &__wrapper {
+        }
+        &__inner {
+          background-color: $primaryColorOpacity;
+          svg {
+            width: 33px;
+            height: 32px;
+            color: white;
+          }
+        }
+      }
+
+      &.active {
+        background-color: $darkBg;
+        .center {
+          background-color: $darkBg;
+          &__inner {
+            box-shadow: none;
+            background-color: $primaryColorOpacity;
+          }
+          &__wrapper {
+            background-color: $darkBg;
+          }
+        }
+      }
+    }
+
+    &.active {
+      background-color: $background;
+
+      .top {
+        background-color: $darkBg;
+      }
+
+      .center {
+        background-color: $darkBg;
+        &__wrapper {
+          background-color: $background;
+        }
+        &__inner {
+          background-color: $primaryColor;
+          box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+          svg {
+            color: white;
+          }
+        }
+      }
+
+      .bottom {
+        background-color: $darkBg;
+      }
+    }
+  }
+}

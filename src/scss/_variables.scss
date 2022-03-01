@@ -1,0 +1,62 @@
+$darkBg: #1f1d2b;
+$background: #252836;
+$primaryColor: #EA7C69;
+$darkPink: #FF7CA3;
+$primaryColorOpacity: rgba(234, 124, 105, 0.26);
+$darkLine: #393C49;
+$formBg: #2D303E;
+$white: #fff;
+$textColor: #ABBBC2;
+$inputColor: #E0E6E9;
+$placeholderColor: #889898;
+$dangerColor: #ae423f;
+$successColor: #5cb85c;
+
+
+$container-width: 90%;
+$duration: 0.15s;
+$heightSettingsFoodHeader: 74px;
+$heightSettingsFoodNavbar: 58px;
+$heightSettingsFoodFooter: 122px;
+
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin listNone() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin visuallyHidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin overflowFixed() {
+  overflow-y: scroll;
+  &::-webkit-scrollbar { width: 0; }
+  & { overflow: -moz-scrollbars-none; }
+  & { -ms-overflow-style: none; }
+}

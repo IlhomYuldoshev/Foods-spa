@@ -1,0 +1,7 @@
+export {ReactComponent as home} from "./images/icons/Home.svg"
+export {ReactComponent as discount} from "./images/icons/Discount.svg"
+export {ReactComponent as dashboard} from "./images/icons/Dashboard.svg"
+export {ReactComponent as message} from "./images/icons/Message.svg"
+export {ReactComponent as notification} from "./images/icons/Notification.svg"
+export {ReactComponent as setting} from "./images/icons/Setting.svg"
+export {ReactComponent as logout} from "./images/icons/Log Out.svg"

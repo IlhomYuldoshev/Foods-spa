@@ -1,0 +1,47 @@
+@import "../variables";
+
+.navbar {
+  margin-bottom: 24px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid $darkLine;
+
+  &__list {
+    @include listNone();
+    display: flex;
+
+    .item:not(:last-child) {
+      margin-right: 32px;
+    }
+
+    .item {
+      @include noSelect();
+      position: relative;
+      color: $white;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.4;
+      white-space: nowrap;
+      transition: color 0.4s ease;
+
+      .bottomLine {
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+
+        width: 0;
+        height: 3px;
+        background-color: $primaryColor;
+        transition: width 0.4s ease;
+      }
+    }
+
+    .item.active {
+      color: $primaryColor;
+
+      .bottomLine {
+        width: 50%;
+      }
+    }
+  }
+}

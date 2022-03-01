@@ -1,0 +1,7 @@
+export const GET_ALL_FOODS = "GET_ALL_FOODS"
+export const SET_FOODS = "SET_FOODS"
+export const SET_LOADING = "SET_LOADING"
+export const SET_FOOD_TYPE = "SET_FOOD_TYPE"
+export const SET_FOOD_ORDER_TYPE = "SET_FOOD_ORDER_TYPE"
+export const ADD_FOOD = "ADD_FOOD"
+export const DELETE_FOOD = "DELETE_FOOD"

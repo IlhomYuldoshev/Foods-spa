@@ -1,0 +1,243 @@
+@import "../variables";
+
+.ordersPayment {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 100vh;
+  width: 410px;
+  padding: 24px;
+  background-color: $darkBg;
+  border-radius: 16px 0 0 16px;
+
+  .orders {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__top {
+      margin-bottom: 24px;
+
+      .title {
+        color: $white;
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 600;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+
+      .types-list {
+        @include listNone();
+        display: flex;
+        align-items: center;
+
+        .type-item:not(:first-child) {
+          margin-left: 8px;
+        }
+
+        .type-item {
+          .btn {
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 600;
+            padding: 7px 12px;
+            border: 1px solid $darkLine;
+            border-radius: 8px;
+            background-color: transparent;
+            color: $primaryColor;
+          }
+
+          &.active {
+            .btn {
+              background-color: $primaryColor;
+              color: $white;
+              border-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    &__items {
+      margin-bottom: 24px;
+      height: calc(100% - 272px);
+      border-bottom: 1px solid $darkLine;
+      overflow: hidden;
+      @include overflowFixed();
+
+      .items-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 600;
+        padding-bottom: 24px;
+        position: sticky;
+        top: 0px;
+        border-bottom: 1px solid $darkLine;
+        background-color: $darkBg;
+
+        .right {
+          display: flex;
+
+          .item:last-child {
+            width: 48px;
+            text-align: right;
+            margin-left: 21px;
+          }
+
+          .item {
+            width: 48px;
+            text-align: center;
+          }
+        }
+      }
+
+      .ordered-foods-list {
+        display: flex;
+        flex-direction: column;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        .food-item:not(:first-child) {
+          margin-top: 24px;
+        }
+
+        .food-item {
+
+
+          &__info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .imgName {
+              display: flex;
+              align-items: center;
+              margin-right: auto;
+
+              img {
+                width: 45px;
+                height: 42px;
+                border-radius: 50%;
+                object-fit: contain;
+                margin-right: 5px;
+              }
+
+              .name-wrapper {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 1.4;
+                color: $textColor;
+
+                .name {
+                  color: #fff;
+                  font-size: 14px;
+                  line-height: 1.3;
+                  margin-bottom: 4px;
+                }
+              }
+            }
+
+            .countPrice {
+              display: flex;
+              align-items: center;
+
+              .count {
+                @include flexCenter();
+                width: 48px;
+                height: 48px;
+                background-color: $formBg;
+                border-radius: 8px;
+              }
+
+              .price {
+                flex-shrink: 0;
+                width: 48px;
+                margin-left: 21px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.4;
+                text-align: right;
+              }
+            }
+          }
+
+          &__note {
+            display: flex;
+            justify-content: space-between;
+
+            .noteInput {
+              width: 100%;
+              border-radius: 8px;
+              border: 1px solid $darkLine;
+              background-color: $formBg;
+              padding: 14px;
+              color: $inputColor;
+              outline: none;
+              &::placeholder {
+                color: $placeholderColor;
+              }
+            }
+
+            .btn-delete {
+              cursor: pointer;
+              margin-left: 21px;
+              @include flexCenter();
+              color: $darkPink;
+              border: 1px solid $darkPink;
+              border-radius: 8px;
+              width: 46px;
+              height: 46px;
+              flex-shrink: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      flex-direction: column;
+      justify-self: end;
+
+      .orders-total-price-list {
+        @include listNone();
+        margin-bottom: 42px;
+
+        .d-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          line-height: 1.4;
+
+          dt {
+            font-weight: 400;
+            font-size: 14px;
+            color: $textColor;
+          }
+          dd {
+            font-weight: 500;
+            font-size: 16px;
+            color: $white;
+          }
+        }
+
+        .d-item:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      .button {
+        cursor: pointer;
+        box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3);
+      }
+    }
+  }
+}

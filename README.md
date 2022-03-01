@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# BOSH SAHIFADAGI POISK HALI ISHLAMAYDI, SETTINGS SAHIFASIDA OVQATLARNI TAHRIRLASH VA OVQAT QO'SHISH IMKONIYATI BOR
+
 ## Available Scripts
 
 In the project directory, you can run:

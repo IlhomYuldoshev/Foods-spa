@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# DISPLAY RAZMERI 1200px X 800px BO'LISHI KERAK
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### NETLIFY LINK https://i352-foods-spa.netlify.app/
 
-# BOSH SAHIFADAGI POISK HALI ISHLAMAYDI, SETTINGS SAHIFASIDA OVQATLARNI TAHRIRLASH VA OVQAT QO'SHISH IMKONIYATI BOR
+        IMPORTANT
+
+## BOSH SAHIFADAGI POISK HALI ISHLAMAYDI, SETTINGS SAHIFASIDA OVQATLARNI TAHRIRLASH VA OVQAT QO'SHISH IMKONIYATI BOR
 
 ## Available Scripts
 
